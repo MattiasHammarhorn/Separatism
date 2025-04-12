@@ -1,0 +1,150 @@
+[Separatism]
+NorthArmyNames[0]="Yugoslav People's Army"
+NorthArmyShortNames[0]="JNA"
+
+SouthArmyNames[0]="Croatian National Guard"
+SouthArmyShortNames[0]="ZNG"
+
+[SMRoleInfoNorthernRifleman]
+MyName="RIFLEMAN"
+
+[SMRoleInfoNorthernScout]
+MyName="SCOUT"
+
+[SMRoleInfoNorthernMachineGunner]
+MyName="MACHINEGUNNER"
+
+[SMRoleInfoNorthernMarksman]
+MyName="MARKSMAN"
+
+[SMRoleInfoNorthernEngineer]
+MyName="COMBAT ENGINEER"
+
+[SMRoleInfoNorthernGrenadier]
+MyName="GRENADIER"
+
+[SMRoleInfoNorthernRadioman]
+MyName="RADIOMAN"
+
+[SMRoleInfoNorthernCommander]
+MyName="COMMANDER"
+
+[SMRoleInfoSouthernRifleman]
+MyName="RIFLEMAN"
+
+[SMRoleInfoSouthernScout]
+MyName="SCOUT"
+
+[SMRoleInfoSouthernMachineGunner]
+MyName="MACHINEGUNNER"
+
+[SMRoleInfoSouthernSniper]
+MyName="SNIPER"
+
+[SMRoleInfoSouthernEngineer]
+MyName="SAPPER"
+
+[SMRoleInfoSouthernGrenadier]
+MyName="GRENADIER"
+
+[SMRoleInfoSouthernRadioman]
+MyName="RADIOMAN"
+
+[SMRoleInfoSouthernCommander]
+MyName="COMMANDER"
+
+[SMWeap_AKM70_AssaultRifle]
+DisplayName="Zastava M70 Assault Rifle"
+ShortDisplayName="Zastava M70"
+CapitalizedDisplayName="ZASTAVA M70 ASSAULT RIFLE"
+Description="Rifle, 7.62x39mm, AK47\n\nYugoslav derivative of the Russian AKM, featuring a longer handguard and flippable grenade sights."
+DisplayInfo[0]=(DisplayName="Zastava M70B1",Description="The Zastava M70B1 is an update of the Zastava M70 Design. Shares similar weight, recoil, rate of fire and muzzle velocity as the Russian AKM. Includes attachable blade style bayonet.",WeaponSpecialAttributesText=("Attachable Bayonet", "Solid Stock"))
+DisplayInfo[1]=(DisplayName="Zastava M70AB1",Description="Lightweight version of the Zastava M70B1 with a foldable stock and no bayonet.",WeaponSpecialAttributesText=("Foldable Stock","-No Bayonet"))
+
+[SMWeap_SKSYugo_Rifle]
+DisplayName="Zastava M59/66A1 Carbine"
+ShortDisplayName="Zastava M59/66A1"
+CapitalizedDisplayName="ZASTAVA M59/66A1 CARBINE"
+Description="Carbine, 7.62x39mm, SKS\n\nYugoslav derivative of the Russian made SKS-45, featuring flippable grenade sights."
+DisplayInfo[0]=(WeaponSpecialAttributesText=("Foldable Bayonet"))
+
+[SMWeap_TTYugo_Pistol]
+DisplayName="Zastava M57 Handgun"
+ShortDisplayName="Zastava M57"
+CapitalizedDisplayName="ZASTAVA M57 HANDGUN"
+Description="Handgun, 7.62x25mm, Zastava M57\n\nYugoslav derivative of the Russian Tokarev handgun, featuring a longer grip and magazine."
+
+[SMPawnHandler]
+JNATunics[0]=(DisplayName="M77 Tunic",BodyMICs=((DisplayName="Olive Gray")))
+JNATunics[1]=(DisplayName="M77 Shirt Long",BodyMICs=((DisplayName="Olive Gray"),(DisplayName="Oakleaf")))
+JNATunics[2]=(DisplayName="M77 Shirt Rolled",BodyMICs=((DisplayName="Olive Gray"),(DisplayName="Oakleaf")))
+
+JNAShirts[0]=(DisplayName="White Shirt")
+JNAShirts[1]=(DisplayName="White Vest")
+JNAShirts[2]=(DisplayName="None")
+
+JNATattoos[0]=(DisplayName="None")
+
+JNAHeadgear[0]=(DisplayName="M-59/85 Helmet")
+JNAHeadgear[1]=(DisplayName="Titovka Cap")
+JNAHeadgear[2]=(DisplayName="M-59/85 Folded Liner")
+JNAHeadgear[3]=(DisplayName="M-59/85 + JA Sticker")
+JNAHeadgear[4]=(DisplayName="M-59/85 + JNA Sticker")
+JNAHeadgear[5]=(DisplayName="M68 MOL Cover")
+
+SerbianHeads[0]=(DisplayName="Branko")
+SerbianHeads[1]=(DisplayName="Petar")
+
+SerbianFaceItems[0]=(DisplayName="None")
+SerbianFaceItems[1]=(DisplayName="Glasses")
+SerbianFaceItems[2]=(DisplayName="Shades")
+SerbianFaceItems[3]=(DisplayName="Cigarette")
+
+SerbianFacialHair[0]=(DisplayName="None")
+SerbianFacialHair[1]=(DisplayName="Pencil Moustache")
+SerbianFacialHair[2]=(DisplayName="Chevron Moustache")
+SerbianFacialHair[3]=(DisplayName="Horseshoe Moustache")
+SerbianFacialHair[4]=(DisplayName="Goatee")
+SerbianFacialHair[5]=(DisplayName="Mutton Chop Beard")
+SerbianFacialHair[6]=(DisplayName="Full Beard")
+
+ZNGTunics[0]=(DisplayName="M65 Field Jacket",BodyMICs=((DisplayName="Woodland")))
+ZNGTunics[1]=(DisplayName="HV Tunic Long",BodyMICs=((DisplayName="Woodland")))
+ZNGTunics[2]=(DisplayName="HV Tunic Rolled",BodyMICs=((DisplayName="Woodland")))
+ZNGTunics[3]=(DisplayName="HV Pants",BodyMICs=((DisplayName="Woodland")))
+
+ZNGShirts[0]=(DisplayName="None")
+ZNGShirts[1]=(DisplayName="Black Shirt")
+ZNGShirts[2]=(DisplayName="Black Vest")
+ZNGShirts[3]=(DisplayName="Woodland Shirt")
+
+ZNGTattoos[0]=(DisplayName="None")
+
+ZNGHeadgear[0]=(DisplayName="HV Cap")
+ZNGHeadgear[1]=(DisplayName="HV Cap + Checkerboard Crest")
+ZNGHeadgear[2]=(DisplayName="M56 Helmet")
+ZNGHeadgear[3]=(DisplayName="Black Ribbon")
+ZNGHeadgear[4]=(DisplayName="Black Ribbon + Checkerboard Pin")
+ZNGHeadgear[5]=(DisplayName="M1 Helmet")
+ZNGHeadgear[6]=(DisplayName="M1 Helmet + Checkerboard Pin")
+ZNGHeadgear[7]=(DisplayName="Black Beret")
+
+CroatianHeads[0]=(DisplayName="Miran")
+CroatianHeads[1]=(DisplayName="Denis")
+
+CroatianFaceItems[0]=(DisplayName="None")
+CroatianFaceItems[1]=(DisplayName="Glasses")
+CroatianFaceItems[2]=(DisplayName="Aviators")
+CroatianFaceItems[3]=(DisplayName="Cigarette")
+
+CroatianFacialHair[0]=(DisplayName="None")
+CroatianFacialHair[1]=(DisplayName="Pencil Moustache")
+CroatianFacialHair[2]=(DisplayName="Chevron Moustache")
+CroatianFacialHair[3]=(DisplayName="Horseshoe Moustache")
+CroatianFacialHair[4]=(DisplayName="Goatee")
+CroatianFacialHair[5]=(DisplayName="Mutton Chop Beard")
+CroatianFacialHair[6]=(DisplayName="Full Beard")
+
+[SMUISceneTeamSelect]
+NorthTeamInfoText="The JNA was the military of the Socialist Federal Republic of Yugoslavia from 1945-1992. As Yugoslavia began to break apart, the JNA started to intervene and give militarily support to ethnic Serb break-away republics in Croatia and Bosnia. They rely on conventional firepower and aerial support. They can deploy directly on their Squad Leader's position."
+SouthTeamInfoText="The ZNG was established in 1991 in order to meet Croatia's demand for an armed force with military capabilities following its secession from Yugoslavia. Made up of former military, policemen, and draftees, they utilise imported or scavenged weaponry and rely on asymmetrical tactics. They can deploy on Squad Tunnels placed by their Squad Leaders."
