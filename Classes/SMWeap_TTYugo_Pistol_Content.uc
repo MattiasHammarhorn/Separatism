@@ -42,5 +42,5 @@ defaultproperties
         bSyncActorLocationToRootRigidBody=true
     End Object
 
-    AttachmentClass=class'ROGameContent.ROWeapAttach_TT33_Pistol'
+    AttachmentClass=class'Separatism.SMWeapAttach_TTYugo_Pistol'
 }

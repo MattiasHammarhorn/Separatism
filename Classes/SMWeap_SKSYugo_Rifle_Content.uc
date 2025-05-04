@@ -26,7 +26,7 @@ defaultproperties
 
     // Pickup staticmesh
     Begin Object Name=PickupMesh
-        SkeletalMesh=SkeletalMesh'WP_VN_3rd_Master.Mesh.SKS_3rd_Master'
+        SkeletalMesh=SkeletalMesh'SM_WP_SKS.Mesh.SM_SKSYugo_3rd_Master'
         PhysicsAsset=PhysicsAsset'WP_VN_3rd_Master.Phy.SKS_3rd_Master_Physics'
         AnimTreeTemplate=AnimTree'WP_VN_3rd_Master.AnimTree.SKS_Rifle_3rd_Tree'
         CollideActors=true
@@ -42,4 +42,6 @@ defaultproperties
         bSkipAllUpdateWhenPhysicsAsleep=TRUE
         bSyncActorLocationToRootRigidBody=true
     End Object
+
+    AttachmentClass=class'Separatism.SMWeapAttach_SKSYugo_Rifle'
 }
