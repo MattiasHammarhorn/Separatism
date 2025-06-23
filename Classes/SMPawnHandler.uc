@@ -294,6 +294,32 @@ defaultproperties
                       RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
                       ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Tunics.Tunic_AUS_Rolled'
                       )}
+    
+          // Full M68 MOL suit
+      JNATunics(3)={( TunicMesh=SkeletalMesh'SM_CHR_JNA.Mesh.JNA_Tunic_MOL_Mesh',
+                      ArmsMeshFP=SkeletalMesh'CHR_VN_DLC_Homeland.Mesh.VN_1stP_NVA_Hooded_Mesh',
+                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_MOL_INST',SleeveMICFP=MaterialInstanceConstant'CHR_VN_DLC_Homeland.Materials.M_VN_1stP_NVA_Hooded_Green_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_NVA_Green_HL')),
+                      SkinToShow=STS_HeadHands,
+                      UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
+                      LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_BareLeg",
+                      RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_BareLeg",
+                      ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Tunics.Tunic_NVA_SniperUniform_HL',
+                      )}
+
+                  // M68 MOL suit, tucked tunic
+      JNATunics(4)={( TunicMesh=SkeletalMesh'SM_CHR_JNA.Mesh.JNA_Tunic_MOL_Tucked_Mesh',
+                      ArmsMeshFP=SkeletalMesh'CHR_VN_DLC_Homeland.Mesh.VN_1stP_NVA_Hooded_Mesh',
+                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_MOL_INST',SleeveMICFP=MaterialInstanceConstant'CHR_VN_DLC_Homeland.Materials.M_VN_1stP_NVA_Hooded_Green_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_NVA_Green_HL')),
+                      SkinToShow=STS_HeadHands,
+                      UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
+                      LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_BareLeg",
+                      RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_BareLeg",
+                      ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Tunics.Tunic_NVA_SniperUniform_HL',
+                      )}
 
       JNAShirts(0)=(ShirtD=Texture2D'SM_CHR_JNA.Textures.Head_Generic_WhiteShirt_D',ShirtN=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_N',ShirtS=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Vest_White')
       JNAShirts(1)=(ShirtD=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_WhiteVest_D',ShirtN=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_N',ShirtS=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Vest_White')

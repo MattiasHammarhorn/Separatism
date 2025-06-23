@@ -10,6 +10,8 @@ class SMWeap_AKM70_AssaultRifle_M70AB1 extends ROWeap_AK47_AssaultRifle_Type56_1
 
 defaultproperties
 {
+    AttachmentClass=class'Separatism.SMWeapAttach_AKM70_AssaultRifle_M70AB1'
+
     // Replace variables with similar values as AKM
     ArmsAnimSet=AnimSet'WP_VN_VC_AK47.Animation.WP_AK47hands_UPGD2'
 
@@ -47,7 +49,7 @@ defaultproperties
     End Object
 
     Begin Object Name=PickupMesh
-        SkeletalMesh=SkeletalMesh'WP_VN_3rd_Master.Mesh_UPGD.AK47_3rd_Master_UPGD2'
+        SkeletalMesh=SkeletalMesh'SM_WP_AK47.Mesh.SM_AKM70_3rd_Master_UPGD2'
         AnimTreeTemplate=AnimTree'WP_VN_3rd_Master.AnimTree.Type56_1_AssaultRifle_3rd_Tree'
     End Object
 
