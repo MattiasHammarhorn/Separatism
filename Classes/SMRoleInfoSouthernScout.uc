@@ -7,7 +7,7 @@ defaultproperties
     ClassIndex=`ROCI_SCOUT // 1
 
     Items[RORIGM_Default]={(
-                    PrimaryWeapons=(class'ROGame.ROWeap_SKS_Rifle',class'ROGame.ROWeap_MP40_SMG',class'ROGame.ROWeap_M1A1_SMG'),
+                    PrimaryWeapons=(class'Separatism.SMWeap_SKSYugo_Rifle',class'ROGame.ROWeap_MP40_SMG',class'ROGame.ROWeap_M1A1_SMG'),
                     OtherItems=(class'ROGame.ROWeap_M61_GrenadeSingle')
         )}
     

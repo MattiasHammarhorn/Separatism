@@ -7,7 +7,7 @@ defaultproperties
     ClassIndex=`ROCI_ENGINEER // 4
 
     Items[RORIGM_Default]={(
-                    PrimaryWeapons=(class'ROGame.ROWeap_SKS_Rifle',class'ROGame.ROWeap_MP40_SMG'),
+                    PrimaryWeapons=(class'Separatism.SMWeap_SKSYugo_Rifle',class'ROGame.ROWeap_MP40_SMG'),
                     OtherItems=(class'ROGame.ROWeap_MD82_Mine',class'ROGame.ROWeap_C4_Explosive')
         )}
     

@@ -7,7 +7,7 @@ defaultproperties
     ClassIndex=`ROCI_RIFLEMAN // 0
 
     Items[RORIGM_Default]={(
-                    PrimaryWeapons=(class'ROGame.ROWeap_AK47_AssaultRifle',class'Separatism.SMWeap_SKSYugo_Rifle'),
+                    PrimaryWeapons=(class'Separatism.SMWeap_AKM70_AssaultRifle',class'Separatism.SMWeap_SKSYugo_Rifle'),
                     OtherItems=(class'ROGame.ROWeap_M61_GrenadeSingle')
         )}
     

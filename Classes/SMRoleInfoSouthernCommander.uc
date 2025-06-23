@@ -8,7 +8,7 @@ defaultproperties
     bIsTeamLeader=true
 
     Items[RORIGM_Default]={(
-                    PrimaryWeapons=(class'ROGame.ROWeap_SKS_Rifle',class'ROGame.ROWeap_MP40_SMG',class'ROGame.ROWeap_AK47_AssaultRifle'),
+                    PrimaryWeapons=(class'Separatism.SMWeap_AKM70_AssaultRifle',class'Separatism.SMWeap_SKSYugo_Rifle',class'ROGame.ROWeap_MP40_SMG'),
                     OtherItems=(class'ROGame.ROWeap_RDG1_SmokeSingle',class'ROGame.ROItem_Binoculars')
         )}
     

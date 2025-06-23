@@ -78,6 +78,8 @@ Description="Handgun, 7.62x25mm, Zastava M57\n\nYugoslav derivative of the Russi
 JNATunics[0]=(DisplayName="M77 Tunic",BodyMICs=((DisplayName="Olive Gray")))
 JNATunics[1]=(DisplayName="M77 Shirt Long",BodyMICs=((DisplayName="Olive Gray"),(DisplayName="Oakleaf")))
 JNATunics[2]=(DisplayName="M77 Shirt Rolled",BodyMICs=((DisplayName="Olive Gray"),(DisplayName="Oakleaf")))
+JNATunics[3]=(DisplayName="M68 MOL Suit",BodyMICs=((DisplayName="M68")))
+JNATunics[4]=(DisplayName="M68 MOL Suit Tucked",BodyMICs=((DisplayName="M68")))
 
 JNAShirts[0]=(DisplayName="White Shirt")
 JNAShirts[1]=(DisplayName="White Vest")
