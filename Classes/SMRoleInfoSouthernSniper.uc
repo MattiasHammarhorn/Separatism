@@ -7,7 +7,7 @@ defaultproperties
     ClassIndex=`ROCI_SNIPER // 3
 
     Items[RORIGM_Default]={(
-                    PrimaryWeapons=(class'ROGame.ROWeap_M40Scoped_Rifle'),
+                    PrimaryWeapons=(class'Separatism.SMWeap_M76Scoped_Rifle',class'ROGame.ROWeap_M40Scoped_Rifle'),
                     OtherItems=(class'ROGame.ROWeap_M61_GrenadeSingle')
         )}
     
