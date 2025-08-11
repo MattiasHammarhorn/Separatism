@@ -7,7 +7,7 @@ defaultproperties
     ClassIndex=`ROCI_MACHINEGUNNER // 2
 
     Items[RORIGM_Default]={(
-                    PrimaryWeapons=(class'ROGame.ROWeap_RPD_LMG'),
+                    PrimaryWeapons=(class'Separatism.SMWeap_RPK_LMG'),
                     OtherItems=(class'ROGame.ROWeap_M61_GrenadeSingle')
     )}
 
