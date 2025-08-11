@@ -270,8 +270,7 @@ defaultproperties
       // M77 shirt, long sleeves
       JNATunics(1)={( TunicMesh=SkeletalMesh'SM_CHR_JNA.Mesh.JNA_Tunic_Shirt_Long_Mesh',
                       ArmsMeshFP=SkeletalMesh'SM_CHR_1stP_Hands_Master.Mesh.SM_1stP_JNA_Shirt_Long_Mesh',
-                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_Shirt_Long_INST',SleeveMICFP=MaterialInstanceConstant'SM_CHR_1stP_Hands_Master.Materials.M_SM_1stP_JNA_Shirt_Long_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_AUS_JungleGreen'),
-                        (BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_Shirt_Long_Oakleaf_INST',SleeveMICFP=MaterialInstanceConstant'SM_CHR_1stP_Hands_Master.Materials.M_SM_1stP_JNA_Shirt_Long_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_AUS_JungleGreen')),
+                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_Shirt_Long_INST',SleeveMICFP=MaterialInstanceConstant'SM_CHR_1stP_Hands_Master.Materials.M_SM_1stP_JNA_Shirt_Long_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_AUS_JungleGreen')),
                       SkinToShow=STS_HeadHands,
                       UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
                       LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
@@ -284,8 +283,7 @@ defaultproperties
       // M77 shirt, rolled sleeves
       JNATunics(2)={( TunicMesh=SkeletalMesh'SM_CHR_JNA.Mesh.JNA_Tunic_Shirt_Rolled_Mesh',
                       ArmsMeshFP=SkeletalMesh'SM_CHR_1stP_Hands_Master.Mesh.SM_1stP_JNA_Shirt_Rolled_Mesh',
-                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_Shirt_Long_INST',SleeveMICFP=MaterialInstanceConstant'SM_CHR_1stP_Hands_Master.Materials.M_SM_1stP_JNA_Shirt_Rolled_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_AUS_JungleGreen'),
-                        (BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_Shirt_Long_Oakleaf_INST',SleeveMICFP=MaterialInstanceConstant'SM_CHR_1stP_Hands_Master.Materials.M_SM_1stP_JNA_Shirt_Long_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_AUS_JungleGreen')),
+                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_Shirt_Long_INST',SleeveMICFP=MaterialInstanceConstant'SM_CHR_1stP_Hands_Master.Materials.M_SM_1stP_JNA_Shirt_Rolled_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_AUS_JungleGreen')),
                       SkinToShow=STS_HeadForearms,
                       UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
                       LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
@@ -466,16 +464,19 @@ defaultproperties
       ZNGHeadgear(0)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Cap1'),HeadgearMICs=(0),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_Cap')
       ZNGHeadgear(1)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Cap2'),HeadgearMICs=(0),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_Cap')
     //   ZNGHeadgear(1)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M59'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NLF_SSh39'))
-      ZNGHeadgear(2)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M56'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_M56'))
-      ZNGHeadgear(3)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Ribbon1'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_Bandana')
-      ZNGHeadgear(4)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Ribbon2'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_Bandana')
-      ZNGHeadgear(5)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M1var1'),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
-      ZNGHeadgear(6)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M1var2'),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
-      ZNGHeadgear(7)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Beret'),HeadgearMICs=(3),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_ARVN_BlackBeret')
+      ZNGHeadgear(2)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M56var1'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_M56')
+      ZNGHeadgear(3)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M56var2'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_M56')
+      ZNGHeadgear(4)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Ribbon1'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_AUS_UncoveredM1')
+      ZNGHeadgear(5)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Ribbon2'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_AUS_UncoveredM1')
+      ZNGHeadgear(6)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Schutzhelme1'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
+      ZNGHeadgear(7)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Schutzhelme2'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
+      ZNGHeadgear(8)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M1var1'),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
+      ZNGHeadgear(9)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M1var2'),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
+      ZNGHeadgear(10)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Beret'),HeadgearMICs=(3),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_ARVN_BlackBeret')
 
       ZNGHeadgearMICs(0)=(HeadgearMICTemplate=MaterialInstanceConstant'SM_CHR_HV_Headgear.Materials.M_HV_Headgear_INST')
       ZNGHeadgearMICs(1)=(HeadgearMICTemplate=MaterialInstanceConstant'SM_CHR_HV_Headgear.Materials.M_HV_Headgear_Hair_INST')
-      ZNGHeadgearMICs(2)=(HeadgearMICTemplate=MaterialInstanceConstant'CHR_VN_VN_Headgear.Materials.M_VN_Headgear_Hair_INST')
+      ZNGHeadgearMICs(2)=(HeadgearMICTemplate=MaterialInstanceConstant'SM_CHR_HV_Headgear.Materials.M_HV_Headgear_Hair2_INST')
       ZNGHeadgearMICs(3)=(HeadgearMICTemplate=MaterialInstanceConstant'SM_CHR_HV_Headgear.Materials.M_HV_Headgear_Beret_INST')
 
       CroatianHeads(0)=(HeadMesh=SkeletalMesh'CHR_VN_US_Heads.Mesh.US_Head2_Mesh',HeadMICTemplates=(MaterialInstanceConstant'CHR_VN_US_Heads.Materials.M_US_Head_02_Long_INST',MaterialInstanceConstant'CHR_VN_US_Heads.Materials.M_US_Head_02_Rolled_INST',MaterialInstanceConstant'CHR_VN_US_Heads.Materials.M_US_Head_02_Torn_INST',MaterialInstanceConstant'CHR_VN_US_Heads.Materials.M_US_Head_02_Pants_Torn_INST',,MaterialInstanceConstant'CHR_VN_US_Heads.Materials.M_US_Head_02_Pilot_INST'),SkinToneID=0,HairColours=15,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Heads.Head_US_02')
