@@ -74,6 +74,21 @@ ShortDisplayName="Zastava M57"
 CapitalizedDisplayName="ZASTAVA M57 HANDGUN"
 Description="Handgun, 7.62x25mm, Zastava M57\n\nYugoslav derivative of the Russian Tokarev handgun, featuring a longer grip and magazine."
 
+[SMWeap_RPK_LMG]
+DisplayName="RPK Light Machine Gun"
+ShortDisplayName="RPK LMG"
+CapitalizedDisplayName="RPK LIGHT MACHINE GUN"
+Description="Light Machine Gun, 7.62x39mm, RPK\n\A light machine gun adaption of the AK platform, featuring a longer barrel and thicker receiver for sustained fire."
+DisplayInfo[0]=(WeaponSpecialAttributesText=("Foldable Bipod"))
+
+[SMWeap_M76Scoped_Rifle]
+DisplayName="Zastava M76 Sniper Rifle"
+ShortDisplayName="Zastava M76"
+CapitalizedDisplayName="ZASTAVA M76 SNIPER RIFLE"
+Description="Sniper Rifle, 7.62x54mmR, Zastava M76\n\nModern Russian Marksman rifle with unique design, including attachable bayonet and dual-sight configuration."
+DisplayInfo[0]=(WeaponSpecialAttributesText=("4x PSO-1 Scope","Attachable Bayonet"))
+
+
 [SMPawnHandler]
 JNATunics[0]=(DisplayName="M77 Tunic",BodyMICs=((DisplayName="Olive Gray")))
 JNATunics[1]=(DisplayName="M77 Shirt Long",BodyMICs=((DisplayName="Olive Gray"),(DisplayName="Oakleaf")))
