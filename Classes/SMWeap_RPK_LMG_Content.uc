@@ -9,7 +9,7 @@ defaultproperties
     Begin Object Name=FirstPersonMesh
         DepthPriorityGroup=SDPG_Foreground
         SkeletalMesh=SkeletalMesh'SM_WP_RPK.Mesh.SM_RPK_UPGD1'
-        PhysicsAsset=PhysicsAsset'WP_VN_AUS_L2A1.Phys.AUS_L2A1_UPGD1_Physics'
+        PhysicsAsset=PhysicsAsset'WP_VN_AUS_L2A1.Phys.AUS_L2A1_UPDG1_Physics'
         AnimSets(0)=AnimSet'WP_VN_AUS_L2A1.Animation.WP_L2A1hands'
         AnimTreeTemplate=AnimTree'WP_VN_AUS_L2A1.Animation.WP_L2A1hands_Tree'
         Scale=1.0
@@ -33,6 +33,8 @@ defaultproperties
         bSkipAllUpdateWhenPhysicsAsleep=TRUE
         bSyncActorLocationToRootRigidBody=true
     End Object
+
+    AttachmentClass=class'Separatism.SMWeapAttach_RPK_LMG'
 
     WeaponFireSnd(DEFAULT_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_AK47.Play_WEP_AK47_Fire_Loop_3P', FirstPersonCue=AkEvent'WW_WEP_AK47.Play_WEP_AK47_Fire_Stereo_Loop')
 	WeaponFireSnd(ALTERNATE_FIREMODE)=(DefaultCue= AkEvent'WW_WEP_AK47.Play_WEP_AK47_Fire_Single_3P', FirstPersonCue=AkEvent'WW_WEP_AK47.Play_WEP_AK47_Fire_Single')

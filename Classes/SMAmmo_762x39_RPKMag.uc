@@ -15,4 +15,6 @@ defaultproperties
     CompatibleWeaponClasses(0)=class'Separatism.SMWeap_RPK_LMG'
 
     InitialAmount=40
+    Weight=1.06
+    ClipsPerSlot=2
 }
