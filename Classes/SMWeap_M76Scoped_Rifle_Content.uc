@@ -1,3 +1,11 @@
+//=============================================================================
+// SMWeap_M76Scoped_Rifle_Content
+//=============================================================================
+// Content for the Zastava M76 scoped rifle.
+//=============================================================================
+// Original rights goes to Tripwire Interactive LLC
+// Original code by Nate Steger @ Antimatter Games, modified by me
+//=============================================================================
 class SMWeap_M76Scoped_Rifle_Content extends SMWeap_M76Scoped_Rifle;
 
 defaultproperties
@@ -15,9 +23,9 @@ defaultproperties
         FOV=70
     End Object
 
-    	// Pickup staticmesh
+    // Pickup staticmesh
 	Begin Object Name=PickupMesh
-		SkeletalMesh=SkeletalMesh'WP_VN_3rd_Master.Mesh.SVD_sniper_3rd_Master'
+		SkeletalMesh=SkeletalMesh'SM_WP_M76.Mesh.SM_M76_sniper_3rd_Master'
 		PhysicsAsset=PhysicsAsset'WP_VN_3rd_Master.Phy.SVD_3rd_Master_Physics'
 		AnimTreeTemplate=AnimTree'WP_VN_3rd_Master.AnimTree.SVD_ScopedRifle_3rd_Tree'
 		CollideActors=true
@@ -34,7 +42,7 @@ defaultproperties
 		bSyncActorLocationToRootRigidBody=true
 	End Object
 
-    AttachmentClass=class'SMWeapAttach_M76Scoped_Rifle'
+    AttachmentClass=class'Separatism.SMWeapAttach_M76Scoped_Rifle'
 
 	ScopeLenseMICTemplate=MaterialInstanceConstant'WP_VN_VC_SVD.Materials.VC_SVD_LenseMat'
 }
