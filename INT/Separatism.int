@@ -85,7 +85,7 @@ DisplayInfo[0]=(WeaponSpecialAttributesText=("Foldable Bipod"))
 DisplayName="Zastava M76 Sniper Rifle"
 ShortDisplayName="Zastava M76"
 CapitalizedDisplayName="ZASTAVA M76 SNIPER RIFLE"
-Description="Sniper Rifle, 7.62x54mmR, Zastava M76\n\nModern Russian Marksman rifle with unique design, including attachable bayonet and dual-sight configuration."
+Description="Sniper Rifle, 7.92x57mm, Zastava M76\n\Yugoslav Designated Marksman rifle based on the AK design, including attachable bayonet and dual-sight configuration."
 DisplayInfo[0]=(WeaponSpecialAttributesText=("4x PSO-1 Scope","Attachable Bayonet"))
 
 
