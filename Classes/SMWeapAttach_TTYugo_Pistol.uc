@@ -16,4 +16,6 @@ defaultproperties
         PhysicsAsset=none
         CullDistance=5000
     End Object
+
+    WeaponClass=class'SMWeap_TTYugo_Pistol'
 }
