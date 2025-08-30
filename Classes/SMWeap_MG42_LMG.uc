@@ -53,7 +53,7 @@ defaultproperties
     // MAIN FIREMODE
 	FiringStatesArray(0)=WeaponFiring
 	WeaponFireTypes(0)=EWFT_Custom
-	WeaponProjectiles(0)=class'M1919Bullet'
+	WeaponProjectiles(0)=class'MG42Bullet'
 	bLoopHighROFSounds(0)=true
 	FireInterval(0)=+0.05 // 1200 RPM
 	DelayedRecoilTime(0)=0.0
@@ -108,8 +108,8 @@ defaultproperties
     InstantHitDamage(0)=115
 	InstantHitDamage(1)=115
 
-    InstantHitDamageTypes(0)=class'RODmgType_M1919Bullet'
-	InstantHitDamageTypes(1)=class'RODmgType_M1919Bullet'
+    InstantHitDamageTypes(0)=class'SMDmgType_MG42Bullet'
+	InstantHitDamageTypes(1)=class'SMDmgType_MG42Bullet'
 
     MuzzleFlashSocket=MuzzleFlashSocket
 	MuzzleFlashPSCTemplate=ParticleSystem'FX_VN_Weapons.MuzzleFlashes.FX_VN_MuzzleFlash_1stP_Rifles_round'
@@ -206,7 +206,7 @@ defaultproperties
 	ISFocusBlendRadius=16
 
     // Ammo
-	AmmoClass=class'ROAmmo_762x63_M1919Belt_250'
+	AmmoClass=class'SMAmmo_792x57_MG42Drum'
 	MaxAmmoCount=50
 	bUsesMagazines=true
 	InitialNumPrimaryMags=4
@@ -216,7 +216,7 @@ defaultproperties
 	MaxPenetrationTests=3
 	MaxNumPenetrations=2
 	// Tracers
-	TracerClass=class'M1919BulletTracer'
+	TracerClass=class'RP46BulletTracer'
 	TracerFrequency=10
 
     PlayerViewOffset=(X=0.0,Y=8.0,Z=-5)
