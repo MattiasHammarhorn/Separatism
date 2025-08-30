@@ -88,6 +88,12 @@ CapitalizedDisplayName="ZASTAVA M76 SNIPER RIFLE"
 Description="Sniper Rifle, 7.92x57mm, Zastava M76\n\Yugoslav Designated Marksman rifle based on the AK design, including attachable bayonet and dual-sight configuration."
 DisplayInfo[0]=(WeaponSpecialAttributesText=("4x PSO-1 Scope","Attachable Bayonet"))
 
+[SMWeap_MG42_LMG]
+DisplayName="MG 42 LMG"
+ShortDisplayName="MG 42 LMG"
+CapitalizedDisplayName="MG 42 LMG"
+Description="General Purpose Machine Gun, 7.92x57mm, MG 42\n\German WW2-era general purpose machine gun whose high fire rate of 1200 rounds per minute and devastatingly suppressive effect earned it the nick-name 'Hitler's Buzzsaw'. The machine gun's effective design would see it survive into present day with modern iterations."
+DisplayInfo[0]=(WeaponSpecialAttributesText=("Foldable Bipod"))
 
 [SMPawnHandler]
 JNATunics[0]=(DisplayName="M77 Tunic",BodyMICs=((DisplayName="Olive Gray")))

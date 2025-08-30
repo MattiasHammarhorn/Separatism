@@ -26,7 +26,7 @@ defaultproperties
 
     // Pickup staticmesh
     Begin Object Name=PickupMesh
-        SkeletalMesh=SkeletalMesh'WP_VN_3rd_Master_04.Mesh.MG34_3rd_Master'
+        SkeletalMesh=SkeletalMesh'SM_WP_MG42_LMG.Mesh.MG42_3rd_Master'
         PhysicsAsset=PhysicsAsset'WP_VN_3rd_Master_04.Phy.MG34_3rd_Physics'
         CollideActors=true
         BlockActors=true
@@ -42,12 +42,12 @@ defaultproperties
         bSyncActorLocationToRootRigidBody=true
     End Object
 
-    // AttachmentClass=class'ROGameContent.ROWeapAttach_MG42_LMG'
+    AttachmentClass=class'Separatism.SMWeapAttach_MG42_LMG'
 
-    WeaponFireSnd(DEFAULT_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_M1919_A6.Play_WEP_M1919A6_Loop_3P', FirstPersonCue=AkEvent'WW_WEP_M1919_A6.Play_WEP_M1919A6_Auto_LP')
-    WeaponFireSnd(ALTERNATE_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_M1918.Play_WEP_M1918_Single_3P', FirstPersonCue=AkEvent'WW_WEP_M1918.Play_WEP_M1918_Fire_Single')
+    WeaponFireSnd(DEFAULT_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_PPSH.Play_WEP_PPSH_Loop_3P', FirstPersonCue=AkEvent'WW_WEP_PPSH.Play_WEP_PPSH_Loop')
+    WeaponFireSnd(ALTERNATE_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_PPSH.Play_WEP_PPSH_Single_3P', FirstPersonCue=AkEvent'WW_WEP_PPSH.Play_WEP_PPSH_Single')
 
     bLoopingFireSnd(DEFAULT_FIREMODE)=true
-    WeaponFireLoopEndSnd(DEFAULT_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_M1919_A6.Play_WEP_M1919A6_Tail_3P', FirstPersonCue=AkEvent'WW_WEP_M1919_A6.Play_WEP_M1919A6_Auto_Tail')
+    WeaponFireLoopEndSnd(DEFAULT_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_PPSH.Play_WEP_PPSH_Tail_3P', FirstPersonCue=AkEvent'WW_WEP_PPSH.Play_WEP_PPSH_Tail')
     // bLoopHighROFSounds(DEFAULT_FIREMODE)=true
 }

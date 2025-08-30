@@ -1,7 +1,7 @@
 //=============================================================================
 // SMWeap_MG42_LMG
 //=============================================================================
-// MG42 light machine gun
+// MG42 general purpose machine gun
 //=============================================================================
 // Original rights goes to Tripwire Interactive LLC
 // Original code by Martin Cooke @ Antimatter Games, modified by me
@@ -9,9 +9,28 @@
 class SMWeap_MG42_LMG extends ROMGWeapon
     abstract;
 
+simulated function SightIndexUpdated()
+{
+	if( SightRotController != none )
+	{
+		SightRotController.BoneRotation.Pitch = SightRanges[SightRangeIndex].SightPitch * -1;
+	}
+	if( SightSlideController != none )
+	{
+		SightSlideController.BoneTranslation.Z = SightRanges[SightRangeIndex].SightSlideOffset;
+	}
+	IronSightPosition.Z=SightRanges[SightRangeIndex].SightPositionOffset;
+	PlayerViewOffset.Z=SightRanges[SightRangeIndex].SightPositionOffset;
+}
+
 simulated function bool OverrideAllowFocusZoom()
 {
     return bUsingSights;
+}
+
+simulated exec function SwitchFireMode()
+{
+	ROMGOperation();
 }
 
 defaultproperties
@@ -54,8 +73,8 @@ defaultproperties
 
     // ShoulderedSpreadMod=6.0
 	// HippedSpreadMod=10.0
-	ShoulderedCasualSpreadMod=550.0
-	HippedCasualSpreadMod=1000.0
+	// ShoulderedCasualSpreadMod=550.0
+	// HippedCasualSpreadMod=1000.0
 
     // AI
 	MinBurstAmount=3
@@ -63,10 +82,15 @@ defaultproperties
 	BurstWaitTime=1.0
 
     // Recoil
-	maxRecoilPitch=60
-	minRecoilPitch=50
-	maxRecoilYaw=35
-	minRecoilYaw=-35
+	maxRecoilPitch=460//60
+	minRecoilPitch=460//50
+	maxRecoilYaw=220//35
+	minRecoilYaw=-220//35
+	maxDeployedRecoilPitch=60//80
+	minDeployedRecoilPitch=60//80
+	maxDeployedRecoilYaw=35//60
+	minDeployedRecoilYaw=35//-60
+	minDeployedRecoilYawAbsolute=25
 	RecoilRate=.045
 	RecoilMaxYawLimit=1500
 	RecoilMinYawLimit=64035
@@ -77,8 +101,8 @@ defaultproperties
 	RecoilISMaxPitchLimit=450
 	RecoilISMinPitchLimit=65035
    	RecoilBlendOutRatio=0.75
-   	PostureHippedRecoilModifer=20.0
-   	PostureShoulderRecoilModifer=10.0
+   	PostureHippedRecoilModifer=5//20.0
+   	// PostureShoulderRecoilModifer=10.0
    	RecoilViewRotationScale=0.45
 
     InstantHitDamage(0)=115
