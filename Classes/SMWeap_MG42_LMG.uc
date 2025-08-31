@@ -36,8 +36,10 @@ simulated exec function SwitchFireMode()
 defaultproperties
 {
     WeaponContentClass(0)="Separatism.SMWeap_MG42_LMG_Content"
+    WeaponContentClass(1)="Separatism.SMWeap_MG42_LMG_Level2"
 
-    RoleSelectionImage(0)=Texture2D'VN_UI_Textures_Three.WeaponTex.ARVN_Weap_M1919'
+    RoleSelectionImage(0)=Texture2D'VN_UI_Textures.WeaponTex.US_Weap_M60_GPMG_Box'
+    RoleSelectionImage(1)=Texture2D'VN_UI_Textures.WeaponTex.US_Weap_M60_GPMG_Belt'
 
     WeaponClassType=ROWCT_LMG
 	TeamIndex=`AXIS_TEAM_INDEX
