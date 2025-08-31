@@ -175,7 +175,12 @@ static function array<TunicInfo> GetTunicArray(byte TeamIndex, byte ArmyIndex, o
 static function SkeletalMesh GetFieldgearMesh(int Team, int ArmyIndex, int TunicMeshID, int ClassIndex, byte BodyMIC)
 {
     if( Team == `AXIS_TEAM_INDEX )
-        return default.JNAFieldgearByRole[ClassIndex].FieldgearByTunicType[0];
+    {
+        if (default.JNATunics[TunicMeshID].AltGearMeshID > 0)
+            return default.JNAFieldgearByRole[ClassIndex].FieldgearByTunicType[default.JNATunics[TunicMeshID].AltGearMeshID];
+        else
+            return default.JNAFieldgearByRole[ClassIndex].FieldgearByTunicType[0];
+    }
     else
         return default.ZNGFieldgearByRole[ClassIndex].FieldgearByTunicType[0];
 }
@@ -293,7 +298,7 @@ defaultproperties
                       ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Tunics.Tunic_AUS_Rolled'
                       )}
     
-          // Full M68 MOL suit
+      // Full M68 MOL suit
       JNATunics(3)={( TunicMesh=SkeletalMesh'SM_CHR_JNA.Mesh.JNA_Tunic_MOL_Mesh',
                       ArmsMeshFP=SkeletalMesh'CHR_VN_DLC_Homeland.Mesh.VN_1stP_NVA_Hooded_Mesh',
                       BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_MOL_INST',SleeveMICFP=MaterialInstanceConstant'CHR_VN_DLC_Homeland.Materials.M_VN_1stP_NVA_Hooded_Green_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_NVA_Green_HL')),
@@ -304,9 +309,10 @@ defaultproperties
                       LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_BareLeg",
                       RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_BareLeg",
                       ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Tunics.Tunic_NVA_SniperUniform_HL',
+                      AltGearMeshID=1
                       )}
 
-                  // M68 MOL suit, tucked tunic
+      // M68 MOL suit, tucked tunic
       JNATunics(4)={( TunicMesh=SkeletalMesh'SM_CHR_JNA.Mesh.JNA_Tunic_MOL_Tucked_Mesh',
                       ArmsMeshFP=SkeletalMesh'CHR_VN_DLC_Homeland.Mesh.VN_1stP_NVA_Hooded_Mesh',
                       BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_MOL_INST',SleeveMICFP=MaterialInstanceConstant'CHR_VN_DLC_Homeland.Materials.M_VN_1stP_NVA_Hooded_Green_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_NVA_Green_HL')),
@@ -317,22 +323,36 @@ defaultproperties
                       LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_BareLeg",
                       RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_BareLeg",
                       ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Tunics.Tunic_NVA_SniperUniform_HL',
+                      AltGearMeshID=1
+                      )}
+
+      // JNA Woolen sweater
+      JNATunics(5)={( TunicMesh=SkeletalMesh'SM_CHR_JNA.Mesh.JNA_Tunic_Sweater_Mesh',
+                      ArmsMeshFP=SkeletalMesh'CHR_VN_1stP_Hands_Master.Mesh.VN_1stP_NVA_Long_Mesh',
+                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_Sweater_INST',SleeveMICFP=MaterialInstanceConstant'SM_CHR_1stP_Hands_Master.Materials.M_SM_1stP_JNA_Long_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character.TunicMats.TunicMat_NVA_Tan')),
+                      SkinToShow=STS_HeadHands,
+                      UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
+                      LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+                      RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+                      ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_NVA_Long'
                       )}
 
       JNAShirts(0)=(ShirtD=Texture2D'SM_CHR_JNA.Textures.Head_Generic_WhiteShirt_D',ShirtN=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_N',ShirtS=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Vest_White')
       JNAShirts(1)=(ShirtD=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_WhiteVest_D',ShirtN=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_N',ShirtS=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Vest_White')
-      JNAShirts(2)=(ShirtD=none,ShirtN=none,ShirtS=none,ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Shirt_None') // According to AMG, this should never be accessed, but it keeps the compiler happy
+    //   JNAShirts(2)=(ShirtD=none,ShirtN=none,ShirtS=none,ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Shirt_None') // According to AMG, this should never be accessed, but it keeps the compiler happy
     
       JNATattoos(0)=(TattooTex=Texture2D'CHR_VN_Common.Tattoos.no_tattoo',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Blank')
 
-      JNAFieldgearByRole(`ROCI_RIFLEMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Rifleman'))
-      JNAFieldgearByRole(`ROCI_SCOUT)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Scout'))
-      JNAFieldgearByRole(`ROCI_MACHINEGUNNER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Machinegunner'))
-      JNAFieldgearByRole(`ROCI_SNIPER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Marksman'))
-      JNAFieldgearByRole(`ROCI_ENGINEER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Sapper'))
-      JNAFieldgearByRole(`ROCI_ANTITANK)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Grenadier'))
-      JNAFieldgearByRole(`ROCI_RADIOMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Radioman'))
-      JNAFieldgearByRole(`ROCI_COMMANDER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Commander'))
+      JNAFieldgearByRole(`ROCI_RIFLEMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Rifleman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Rifleman'))
+      JNAFieldgearByRole(`ROCI_SCOUT)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Scout',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Scout'))
+      JNAFieldgearByRole(`ROCI_MACHINEGUNNER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Machinegunner',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Machinegunner'))
+      JNAFieldgearByRole(`ROCI_SNIPER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Marksman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Marksman'))
+      JNAFieldgearByRole(`ROCI_ENGINEER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Sapper',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Sapper'))
+      JNAFieldgearByRole(`ROCI_ANTITANK)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Grenadier',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Grenadier'))
+      JNAFieldgearByRole(`ROCI_RADIOMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Radioman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Radioman'))
+      JNAFieldgearByRole(`ROCI_COMMANDER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Commander',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Commander'))
     
       JNAHeadgear(0)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_JNA_Headgear.Mesh.JNA_Headgear_M59-85'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NLF_SSh39'))
       JNAHeadgear(1)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_JNA_Headgear.Mesh.JNA_Headgear_Titovka'),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_Cap'))
@@ -419,6 +439,19 @@ defaultproperties
                       ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Tunics.Tunic_AUS_Pants'
                       )}
 
+      // German Commando sweater
+      ZNGTunics(4)={( TunicMesh=SkeletalMesh'SM_CHR_HV.Mesh.HV_Tunic_GerSweater_Mesh',
+                      ArmsMeshFP=SkeletalMesh'CHR_VN_1stP_Hands_Master.Mesh.VN_1stP_NVA_Long_Mesh',
+                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_HV.Materials.M_HV_Tunic_GerSweater_INST',SleeveMICFP=MaterialInstanceConstant'CHR_VN_1stP_Hands_Master.Materials.M_VN_1stP_US_Camo_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character.TunicMats.TunicMat_USMC_LowlandERDL')),
+                      SkinToShow=STS_HeadHands,
+                      UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
+                      LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+                      RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+                      ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USMC_Long'
+                      )}
+
       // Military sweater, long sleeves
     //   ZNGTunics(1)={( TunicMesh=SkeletalMesh'SM_CHR_HV.Mesh.HV_Tunic_Sweater_Long_Mesh',
     //                   ArmsMeshFP=SkeletalMesh'CHR_VN_1stP_Hands_Master.Mesh.VN_1stP_NVA_Long_Mesh',
@@ -445,10 +478,10 @@ defaultproperties
     //                   ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Pants_USMC_Long'
     //                   )}
 
-      ZNGShirts(0)=(ShirtD=none,ShirtN=none,ShirtS=none,ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Shirt_None') // According to AMG, this should never be accessed, but it keeps the compiler happy
-      ZNGShirts(1)=(ShirtD=Texture2D'CHR_VN_Common.Textures.Head_Generic_blackshirt_D',ShirtN=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_N',ShirtS=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Shirt_Black')
-      ZNGShirts(2)=(ShirtD=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_BlackVest_D',ShirtN=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_N',ShirtS=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Vest_Black')
-      ZNGShirts(3)=(ShirtD=Texture2D'SM_CHR_HV.Textures.Head_Generic_WoodlandShirt_D',ShirtN=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_N',ShirtS=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Shirt_Olive')
+    //   ZNGShirts(0)=(ShirtD=none,ShirtN=none,ShirtS=none,ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Shirt_None') // According to AMG, this should never be accessed, but it keeps the compiler happy
+      ZNGShirts(0)=(ShirtD=Texture2D'CHR_VN_Common.Textures.Head_Generic_blackshirt_D',ShirtN=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_N',ShirtS=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Shirt_Black')
+      ZNGShirts(1)=(ShirtD=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_BlackVest_D',ShirtN=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_N',ShirtS=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Vest_Black')
+      ZNGShirts(2)=(ShirtD=Texture2D'SM_CHR_HV.Textures.Head_Generic_WoodlandShirt_D',ShirtN=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_N',ShirtS=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Shirt_Olive')
     
       ZNGTattoos(0)=(TattooTex=Texture2D'CHR_VN_Common.Tattoos.no_tattoo',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Blank')
 
@@ -466,10 +499,10 @@ defaultproperties
     //   ZNGHeadgear(1)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M59'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NLF_SSh39'))
       ZNGHeadgear(2)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M56var1'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_M56')
       ZNGHeadgear(3)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M56var2'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_M56')
-      ZNGHeadgear(4)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Ribbon1'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_AUS_UncoveredM1')
-      ZNGHeadgear(5)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Ribbon2'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_AUS_UncoveredM1')
-      ZNGHeadgear(6)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Schutzhelme1'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
-      ZNGHeadgear(7)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Schutzhelme2'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
+      ZNGHeadgear(4)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Ribbon1'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_Bandana')
+      ZNGHeadgear(5)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Ribbon2'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_Bandana')
+      ZNGHeadgear(6)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Schutzhelme1'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_AUS_UncoveredM1')
+      ZNGHeadgear(7)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Schutzhelme2'),HeadgearMICs=(2),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_AUS_UncoveredM1')
       ZNGHeadgear(8)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M1var1'),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
       ZNGHeadgear(9)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_M1var2'),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_US_ERDL')
       ZNGHeadgear(10)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Beret'),HeadgearMICs=(3),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.Headgear.Headgear_ARVN_BlackBeret')
