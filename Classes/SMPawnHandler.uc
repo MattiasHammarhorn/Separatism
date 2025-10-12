@@ -339,6 +339,19 @@ defaultproperties
                       ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_NVA_Long'
                       )}
 
+      // M77 Shirt, Borovo vest Type I
+      JNATunics(6)={( TunicMesh=SkeletalMesh'SM_CHR_JNA.Mesh.JNA_Tunic_Shirt_Long_Vest_Mesh',
+                      ArmsMeshFP=SkeletalMesh'SM_CHR_1stP_Hands_Master.Mesh.SM_1stP_JNA_Shirt_Long_Mesh',
+                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_JNA.Materials.M_JNA_Tunic_Shirt_Long_INST',SleeveMICFP=MaterialInstanceConstant'SM_CHR_1stP_Hands_Master.Materials.M_SM_1stP_JNA_Shirt_Long_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character_Two.TunicMats.TunicMat_AUS_JungleGreen')),
+                      SkinToShow=STS_HeadHands,
+                      UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
+                      LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+                      RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+                      ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USArmy_Vest_Long'
+                      )}
+
       JNAShirts(0)=(ShirtD=Texture2D'SM_CHR_JNA.Textures.Head_Generic_WhiteShirt_D',ShirtN=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_N',ShirtS=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Vest_White')
       JNAShirts(1)=(ShirtD=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_WhiteVest_D',ShirtN=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_N',ShirtS=Texture2D'CHR_VN_Common.Textures_Vest.Head_Generic_Vest_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Shirts.Vest_White')
     //   JNAShirts(2)=(ShirtD=none,ShirtN=none,ShirtS=none,ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Shirt_None') // According to AMG, this should never be accessed, but it keeps the compiler happy
@@ -451,6 +464,31 @@ defaultproperties
                       RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
                       ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USMC_Long'
                       )}
+    
+      ZNGTunics(5)={( TunicMesh=SkeletalMesh'SM_CHR_HV.Mesh.HV_Tunic_Long_Vest_Mesh',
+                      ArmsMeshFP=SkeletalMesh'CHR_VN_1stP_Hands_Master.Mesh.VN_1stP_US_Long_Mesh',
+                      BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_HV.Materials.M_HV_Tunic_Long_INST',SleeveMICFP=MaterialInstanceConstant'CHR_VN_1stP_Hands_Master.Materials.M_VN_1stP_US_Camo_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character.TunicMats.TunicMat_USMC_LowlandERDL')),
+                      SkinToShow=STS_HeadHands,
+                      UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
+                      LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+                      LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+                      RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+                      ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USMC_Vest_Long'
+                      )}
+    
+      // Woodland pants only with Military Vest
+    //   ZNGTunics(5)={( TunicMesh=SkeletalMesh'SM_CHR_HV.Mesh.HV_Tunic_Vest_Mesh',
+    //                   ArmsMeshFP=SkeletalMesh'CHR_VN_1stP_Hands_Master.Mesh.VN_1stP_ALL_Bare_Mesh',
+    //                   BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_HV.Materials.M_HV_Tunic_Shirt_Long_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character.TunicMats.TunicMat_USArmy_Olive')),
+    //                   SkinToShow=STS_AboveWaist,
+    //                   UberGoreMesh=SkeletalMesh'CHR_VN_Gore.Mesh.Gore_Main_Mesh',
+    //                   LeftHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+    //                   RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
+    //                   LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+    //                   RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
+    //                   ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USArmy_Vest_Pants'
+    //                   )}
 
       // Military sweater, long sleeves
     //   ZNGTunics(1)={( TunicMesh=SkeletalMesh'SM_CHR_HV.Mesh.HV_Tunic_Sweater_Long_Mesh',

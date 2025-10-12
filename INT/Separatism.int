@@ -75,38 +75,38 @@ CapitalizedDisplayName="ZASTAVA M57 HANDGUN"
 Description="Handgun, 7.62x25mm, Zastava M57\n\nYugoslav derivative of the Russian Tokarev handgun, featuring a longer grip and magazine."
 
 [SMWeap_RPK_LMG]
-DisplayName="RPK Light Machine Gun"
-ShortDisplayName="RPK LMG"
-CapitalizedDisplayName="RPK LIGHT MACHINE GUN"
-Description="Light Machine Gun, 7.62x39mm, RPK\n\A light machine gun adaption of the AK platform, featuring a longer barrel and thicker receiver for sustained fire."
+DisplayName="RPK LMG"
+ShortDisplayName="RPK"
+CapitalizedDisplayName="RPK LMG"
+Description="Light Machine Gun, 7.62x39mm, RPK\n\nLight Machine Gun adaption of the AK-platform, featuring a longer barrel and a bigger receiver for sustained fire."
 DisplayInfo[0]=(WeaponSpecialAttributesText=("Foldable Bipod"))
 
 [SMWeap_M76Scoped_Rifle]
-DisplayName="Zastava M76 Sniper Rifle"
+DisplayName="M76 Sniper Rifle"
 ShortDisplayName="Zastava M76"
 CapitalizedDisplayName="ZASTAVA M76 SNIPER RIFLE"
-Description="Sniper Rifle, 7.92x57mm, Zastava M76\n\Yugoslav Designated Marksman rifle based on the AK design, including attachable bayonet and dual-sight configuration."
+Description="Sniper Rifle, 7.92x57mm, Zastava M76\n\nYugoslav Designated Marksman rifle based on the AK design, including attachable bayonet and dual-sight configuration."
 DisplayInfo[0]=(WeaponSpecialAttributesText=("4x PSO-1 Scope","Attachable Bayonet"))
 
 [SMWeap_MG42_LMG]
 DisplayName="MG 42 LMG"
 ShortDisplayName="MG 42 LMG"
 CapitalizedDisplayName="MG 42 LMG"
-Description="General Purpose Machine Gun, 7.92x57mm, MG 42\n\German WW2-era general purpose machine gun whose high fire rate of 1200 rounds per minute and devastatingly suppressive effect earned it the nick-name 'Hitler's Buzzsaw'. The machine gun's effective design has survived into present day with modern iterations."
+Description="General Purpose Machine Gun, 7.92x57mm, MG 42\n\nGerman WW2-era general purpose machine gun whose high fire rate of 1200 rounds per minute and devastatingly suppressive effect earned it the nick-name 'Hitler's Buzzsaw'. The machine gun's effective design has survived into present day with modern iterations."
 DisplayInfo[0]=(WeaponSpecialAttributesText=("50 round drum magazines","Foldable Bipod"))
 DisplayInfo[1]=(WeaponSpecialAttributesText=("100 round belts","Foldable Bipod"))
 
 [SMPawnHandler]
 JNATunics[0]=(DisplayName="M77 Tunic",BodyMICs=((DisplayName="Olive Gray")))
-JNATunics[1]=(DisplayName="M77 Shirt Long",BodyMICs=((DisplayName="Olive Gray"),(DisplayName="Oakleaf")))
-JNATunics[2]=(DisplayName="M77 Shirt Rolled",BodyMICs=((DisplayName="Olive Gray"),(DisplayName="Oakleaf")))
-JNATunics[3]=(DisplayName="M68 MOL Suit",BodyMICs=((DisplayName="M68")))
-JNATunics[4]=(DisplayName="M68 MOL Suit Tucked",BodyMICs=((DisplayName="M68")))
-JNATunics[5]=(DisplayName="Woolen Sweater",BodyMICs=((DisplayName="Olive green")))
+JNATunics[1]=(DisplayName="M77 Shirt Long",BodyMICs=((DisplayName="Olive Gray")))
+JNATunics[2]=(DisplayName="M77 Shirt Rolled",BodyMICs=((DisplayName="Olive Gray")))
+JNATunics[3]=(DisplayName="M-68 MOL",BodyMICs=((DisplayName="MOL")))
+JNATunics[4]=(DisplayName="M-68 MOL Tucked",BodyMICs=((DisplayName="MOL")))
+JNATunics[5]=(DisplayName="Woolen Sweater",BodyMICs=((DisplayName="Olive Green")))
+JNATunics[6]=(DisplayName="M77 Shirt Long + Vest",BodyMICs=((DisplayName="Olive Gay")))
 
 JNAShirts[0]=(DisplayName="White Shirt")
 JNAShirts[1]=(DisplayName="White Vest")
-JNAShirts[2]=(DisplayName="None")
 
 JNATattoos[0]=(DisplayName="None")
 
@@ -115,10 +115,11 @@ JNAHeadgear[1]=(DisplayName="Titovka Cap")
 JNAHeadgear[2]=(DisplayName="M-59/85 Folded Liner")
 JNAHeadgear[3]=(DisplayName="M-59/85 + JA Sticker")
 JNAHeadgear[4]=(DisplayName="M-59/85 + JNA Sticker")
-JNAHeadgear[5]=(DisplayName="M68 MOL Cover")
+JNAHeadgear[5]=(DisplayName="MMS-68 Helmet Cover")
 
 SerbianHeads[0]=(DisplayName="Branko")
 SerbianHeads[1]=(DisplayName="Petar")
+SerbianHeads[2]=(DisplayName="Alen")
 
 SerbianFaceItems[0]=(DisplayName="None")
 SerbianFaceItems[1]=(DisplayName="Glasses")
@@ -137,29 +138,30 @@ ZNGTunics[0]=(DisplayName="M65 Field Jacket",BodyMICs=((DisplayName="Woodland"))
 ZNGTunics[1]=(DisplayName="HV Tunic Long",BodyMICs=((DisplayName="Woodland")))
 ZNGTunics[2]=(DisplayName="HV Tunic Rolled",BodyMICs=((DisplayName="Woodland")))
 ZNGTunics[3]=(DisplayName="HV Pants",BodyMICs=((DisplayName="Woodland")))
-ZNGTunics[4]=(DisplayName="German Commando Sweater",BodyMICs=((DisplayName="Olive green")))
+ZNGTunics[4]=(DisplayName="German Commando Sweater",BodyMICs=((DisplayName="Olive Green")))
+ZNGTunics[5]=(DisplayName="M65 Field Jacket + Vest",BodyMICs=((DisplayName="Woodland")))
 
-ZNGShirts[0]=(DisplayName="None")
-ZNGShirts[1]=(DisplayName="Black Shirt")
-ZNGShirts[2]=(DisplayName="Black Vest")
-ZNGShirts[3]=(DisplayName="Woodland Shirt")
+ZNGShirts[0]=(DisplayName="Black Shirt")
+ZNGShirts[1]=(DisplayName="Black Vest")
+ZNGShirts[2]=(DisplayName="Woodland Shirt")
 
 ZNGTattoos[0]=(DisplayName="None")
 
 ZNGHeadgear[0]=(DisplayName="HV Cap")
 ZNGHeadgear[1]=(DisplayName="HV Cap + Checkerboard Crest")
 ZNGHeadgear[2]=(DisplayName="M56 Helmet")
-ZNGHeadgear[3]=(DisplayName="M56 Helmet + Checkerboard sticker")
+ZNGHeadgear[3]=(DisplayName="M56 Helmet + Checkerboard Sticker")
 ZNGHeadgear[4]=(DisplayName="Black Ribbon")
 ZNGHeadgear[5]=(DisplayName="Black Ribbon + Checkerboard Pin")
-ZNGHeadgear[6]=(DisplayName="Schutzehelme M48/62")
-ZNGHeadgear[7]=(DisplayName="Schutzehelme M48/62 + Checkerboard sticker")
+ZNGHeadgear[6]=(DisplayName="Schutzhelme M48/62")
+ZNGHeadgear[7]=(DisplayName="Schutzhelme M48/62 + Checkerboard Sticker")
 ZNGHeadgear[8]=(DisplayName="M1 Helmet")
 ZNGHeadgear[9]=(DisplayName="M1 Helmet + Checkerboard Pin")
 ZNGHeadgear[10]=(DisplayName="Black Beret")
 
 CroatianHeads[0]=(DisplayName="Miran")
 CroatianHeads[1]=(DisplayName="Denis")
+CroatianHeads[2]=(DisplayName="Zeljko")
 
 CroatianFaceItems[0]=(DisplayName="None")
 CroatianFaceItems[1]=(DisplayName="Glasses")
