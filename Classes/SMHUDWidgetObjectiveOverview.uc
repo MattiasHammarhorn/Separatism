@@ -1,22 +1,22 @@
 class SMHUDWidgetObjectiveOverview extends ROHUDWidgetObjectiveOverview;
 
 defaultproperties {
-	// NorthIcons(0)={(ObjIconRed = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_red',
-	// 		ObjIconBlue = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_blue',
-	// 		ObjBorder=Texture2D'VN_UI_Textures.HUD.GameMode.ui_hud_obj_NVA_border_GM',
-	// 		HomeObjIconRed = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_red_red',
-	// 		HomeObjIconBlue = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_blue_blue',
-	// 		HomeObjEnemyHeldIconRed = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_blue_red',
-	// 		HomeObjEnemyHeldIconBlue = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_red_blue',
-	// 		HomeObjNeutralRed = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_red_white',
-	// 		HomeObjNeutralBlue = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_blue_white',
-	// 		//SatchelObjIcon = Texture2D'RS_UI_Textures.HUD.Destroy.ui_hud_Jap_Obj_Red_Destroy',
-	// 		CappingObjBorderRed = Texture2D'VN_UI_Textures.HUD.GameMode.ui_hud_obj_NVA_border_glow_red_GM',
-	// 		CappingObjBorderBlue = Texture2D'VN_UI_Textures.HUD.GameMode.ui_hud_obj_NVA_border_glow_blue_GM',
-	// 		//EnemyCappingSatchelObj = Texture2D'RS_UI_Textures.HUD.Destroy.ui_hud_Jap_Obj_Green_Destroy',
-	// 		UpperEdgeMargin=0.07,	// 9px
-	// 		LowerEdgeMargin=0.07,	// 9px
-	// 	        )}
+	NorthIcons(0)={(ObjIconRed = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_red',
+			ObjIconBlue = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_blue',
+			ObjBorder=Texture2D'VN_UI_Textures.HUD.GameMode.ui_hud_obj_NVA_border_GM',
+			HomeObjIconRed = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_red_red',
+			HomeObjIconBlue = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_blue_blue',
+			HomeObjEnemyHeldIconRed = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_blue_red',
+			HomeObjEnemyHeldIconBlue = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_red_blue',
+			HomeObjNeutralRed = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_red_white',
+			HomeObjNeutralBlue = Texture2D'VN_UI_Textures.OverheadMap.ui_overheadmap_icons_NVA_home_blue_white',
+			//SatchelObjIcon = Texture2D'RS_UI_Textures.HUD.Destroy.ui_hud_Jap_Obj_Red_Destroy',
+			CappingObjBorderRed = Texture2D'VN_UI_Textures.HUD.GameMode.ui_hud_obj_NVA_border_glow_red_GM',
+			CappingObjBorderBlue = Texture2D'VN_UI_Textures.HUD.GameMode.ui_hud_obj_NVA_border_glow_blue_GM',
+			//EnemyCappingSatchelObj = Texture2D'RS_UI_Textures.HUD.Destroy.ui_hud_Jap_Obj_Green_Destroy',
+			UpperEdgeMargin=0.07,	// 9px
+			LowerEdgeMargin=0.07,	// 9px
+		        )}
     
         SouthIcons(0)={(ObjIconRed = Texture2D'SM_UI.OverheadMap.ui_overheadmap_icons_ZNG_red',
                         ObjIconBlue = Texture2D'SM_UI.OverheadMap.ui_overheadmap_icons_ZNG_blue',
