@@ -103,7 +103,7 @@ JNATunics[2]=(DisplayName="M77 Shirt Rolled",BodyMICs=((DisplayName="Olive Gray"
 JNATunics[3]=(DisplayName="M-68 MOL",BodyMICs=((DisplayName="MOL")))
 JNATunics[4]=(DisplayName="M-68 MOL Tucked",BodyMICs=((DisplayName="MOL")))
 JNATunics[5]=(DisplayName="Woolen Sweater",BodyMICs=((DisplayName="Olive Green")))
-JNATunics[6]=(DisplayName="M77 Shirt Long + Vest",BodyMICs=((DisplayName="Olive Gay")))
+JNATunics[6]=(DisplayName="M77 Shirt + Vest",BodyMICs=((DisplayName="Olive Gray")))
 
 JNAShirts[0]=(DisplayName="White Shirt")
 JNAShirts[1]=(DisplayName="White Vest")
