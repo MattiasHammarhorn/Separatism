@@ -182,7 +182,12 @@ static function SkeletalMesh GetFieldgearMesh(int Team, int ArmyIndex, int Tunic
             return default.JNAFieldgearByRole[ClassIndex].FieldgearByTunicType[0];
     }
     else
-        return default.ZNGFieldgearByRole[ClassIndex].FieldgearByTunicType[0];
+    {
+        if(default.ZNGTunics[TunicMeshID].AltGearMeshID > 0)
+            return default.ZNGFieldgearByRole[ClassIndex].FieldgearByTunicType[default.ZNGTunics[TunicMeshID].AltGearMeshID];
+        else
+            return default.ZNGFieldgearByRole[ClassIndex].FieldgearByTunicType[0];
+    }
 }
 
 static function array<ShirtInfo> GetShirtArray(byte TeamIndex, byte ArmyIndex, optional byte bPilot)
@@ -349,7 +354,8 @@ defaultproperties
                       RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
                       LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
                       RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
-                      ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USArmy_Vest_Long'
+                      ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USArmy_Vest_Long',
+                      AltGearMeshID=2
                       )}
 
       JNAShirts(0)=(ShirtD=Texture2D'SM_CHR_JNA.Textures.Head_Generic_WhiteShirt_D',ShirtN=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_N',ShirtS=Texture2D'CHR_VN_Common.Textures.Head_Generic_shirt_S',ThumbnailImage=Texture2D'VN_UI_Textures_Character.ShirtS.Vest_White')
@@ -358,14 +364,14 @@ defaultproperties
     
       JNATattoos(0)=(TattooTex=Texture2D'CHR_VN_Common.Tattoos.no_tattoo',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Blank')
 
-      JNAFieldgearByRole(`ROCI_RIFLEMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Rifleman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Rifleman'))
-      JNAFieldgearByRole(`ROCI_SCOUT)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Scout',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Scout'))
-      JNAFieldgearByRole(`ROCI_MACHINEGUNNER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Machinegunner',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Machinegunner'))
-      JNAFieldgearByRole(`ROCI_SNIPER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Marksman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Marksman'))
-      JNAFieldgearByRole(`ROCI_ENGINEER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Sapper',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Sapper'))
-      JNAFieldgearByRole(`ROCI_ANTITANK)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Grenadier',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Grenadier'))
-      JNAFieldgearByRole(`ROCI_RADIOMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Radioman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Radioman'))
-      JNAFieldgearByRole(`ROCI_COMMANDER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Commander',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Commander'))
+      JNAFieldgearByRole(`ROCI_RIFLEMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Rifleman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Rifleman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Vest'))
+      JNAFieldgearByRole(`ROCI_SCOUT)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Scout',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Scout',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Vest'))
+      JNAFieldgearByRole(`ROCI_MACHINEGUNNER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Machinegunner',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Machinegunner',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Vest'))
+      JNAFieldgearByRole(`ROCI_SNIPER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Marksman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Marksman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Vest'))
+      JNAFieldgearByRole(`ROCI_ENGINEER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Sapper',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Sapper',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Vest'))
+      JNAFieldgearByRole(`ROCI_ANTITANK)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Grenadier',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Grenadier',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Vest'))
+      JNAFieldgearByRole(`ROCI_RADIOMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Radioman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Radioman',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Vest_Radioman'))
+      JNAFieldgearByRole(`ROCI_COMMANDER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Long_Commander',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_MOL_Commander',SkeletalMesh'SM_CHR_JNA.GearMesh.JNA_Gear_Vest'))
     
       JNAHeadgear(0)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_JNA_Headgear.Mesh.JNA_Headgear_M59-85'),HeadgearMICs=(1),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NLF_SSh39'))
       JNAHeadgear(1)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_JNA_Headgear.Mesh.JNA_Headgear_Titovka'),HeadgearSocket=helmet,bIsHelmet=1,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_Cap'))
@@ -465,6 +471,7 @@ defaultproperties
                       ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USMC_Long'
                       )}
     
+      // M65 Tunic with military vest
       ZNGTunics(5)={( TunicMesh=SkeletalMesh'SM_CHR_HV.Mesh.HV_Tunic_Long_Vest_Mesh',
                       ArmsMeshFP=SkeletalMesh'CHR_VN_1stP_Hands_Master.Mesh.VN_1stP_US_Long_Mesh',
                       BodyMICs=((BodyMICTemplate=MaterialInstanceConstant'SM_CHR_HV.Materials.M_HV_Tunic_Long_INST',SleeveMICFP=MaterialInstanceConstant'CHR_VN_1stP_Hands_Master.Materials.M_VN_1stP_US_Camo_INST',ThumbnailImage=Texture2D'VN_UI_Textures_Character.TunicMats.TunicMat_USMC_LowlandERDL')),
@@ -474,7 +481,8 @@ defaultproperties
                       RightHandGibClass="ROGameContent.ROGib_HumanArm_Gore_BareArm",
                       LeftLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
                       RightLegGibClass="ROGameContent.ROGib_HumanLeg_Gore_USBoot",
-                      ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USMC_Vest_Long'
+                      ThumbnailImage=Texture2D'VN_UI_Textures_Character.Tunics.Tunic_USMC_Vest_Long',
+                      AltGearMeshID=1
                       )}
     
       // Woodland pants only with Military Vest
@@ -523,14 +531,14 @@ defaultproperties
     
       ZNGTattoos(0)=(TattooTex=Texture2D'CHR_VN_Common.Tattoos.no_tattoo',ThumbnailImage=Texture2D'VN_UI_Textures_Character.Blank')
 
-      ZNGFieldgearByRole(`ROCI_RIFLEMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Rifleman'))
-      ZNGFieldgearByRole(`ROCI_SCOUT)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Scout'))
-      ZNGFieldgearByRole(`ROCI_MACHINEGUNNER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Machinegunner'))
-      ZNGFieldgearByRole(`ROCI_SNIPER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Sniper'))
-      ZNGFieldgearByRole(`ROCI_ENGINEER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Sapper'))
-      ZNGFieldgearByRole(`ROCI_HEAVY)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Grenadier'))
-      ZNGFieldgearByRole(`ROCI_RADIOMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Radioman'))
-      ZNGFieldgearByRole(`ROCI_COMMANDER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Commander'))
+      ZNGFieldgearByRole(`ROCI_RIFLEMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Rifleman',SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Vest'))
+      ZNGFieldgearByRole(`ROCI_SCOUT)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Scout',SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Vest'))
+      ZNGFieldgearByRole(`ROCI_MACHINEGUNNER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Machinegunner',SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Vest'))
+      ZNGFieldgearByRole(`ROCI_SNIPER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Sniper',SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Vest'))
+      ZNGFieldgearByRole(`ROCI_ENGINEER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Sapper',SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Vest'))
+      ZNGFieldgearByRole(`ROCI_HEAVY)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Grenadier',SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Vest'))
+      ZNGFieldgearByRole(`ROCI_RADIOMAN)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Radioman',SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Vest_Radioman'))
+      ZNGFieldgearByRole(`ROCI_COMMANDER)=(FieldgearByTunicType=(SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Long_Commander',SkeletalMesh'SM_CHR_HV.GearMesh.HV_Gear_Vest'))
 
       ZNGHeadgear(0)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Cap1'),HeadgearMICs=(0),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_Cap')
       ZNGHeadgear(1)=(HeadgearMeshes=(SkeletalMesh'SM_CHR_HV_Headgear.Mesh.HV_Headgear_Cap2'),HeadgearMICs=(0),HeadgearSocket=helmet,bIsHelmet=0,ThumbnailImage=Texture2D'VN_UI_Textures_Character.Headgear.Headgear_NVA_Cap')
